@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+#body{
+    background-image: url(wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+
+    cursor: url('kursor/default.cur'), auto;
+}
+
+.img{
+    max-width: 64px;
+    max-height: 64px;
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+}
+
+.img:hover{
+    transform: translateY(-20%);
+    transform-origin: top;
+}
+
+.img:hover::before {
+    content: attr(title);
+    position: absolute;
+    display: block;
+    background-color: #333; /* Kolor tła */
+    color: #fff; /* Kolor tekstu */
+    padding: 5px; /* Wielkość wypełnienia */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    z-index: 1; /* Nad innymi elementami */
+}
+
+.bottom{
+    max-width: 80%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    bottom: 1%;
+    border-radius: 15px;
+    padding: 10px 10px 10px 20px;
+    backdrop-filter: blur(20px);
+
+    background-color: rgba(238, 233, 233, 0.35);
+}
+
+.pasek{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 55px;
+    width: 5px;
+    border-radius: 5px;
+    background-color: rgba(238, 233, 233, 0.2);
+    color: rgba(238, 233, 233, 0.01);
+}
+
+
+
+.top{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: rgba(238, 233, 233, 0.2);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    align-items: center;
+
+    overflow: hidden;
+    display: flex;
+}
+
+.ikona-lewa{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: 0.4s ease-in-out;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.apple{
+    align-self: center;
+    max-width: 32px;
+    max-height: 32px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.ikona-lewa:hover{
+    border-radius: 5px;
+    background-color: rgba(238, 233, 233, 0.4);
+}
+
+#clock{
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
+
+    float: right;
+    font-weight: 700;
+}
